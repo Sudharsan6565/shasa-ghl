@@ -1,0 +1,30 @@
+{
+  "type": "function",
+  "function": {
+    "name": "get_available_slots",
+    "description": "Fetches available appointment slots from GoHighLevel calendar",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "startDate": {
+          "type": "string",
+          "description": "Start time in milliseconds since epoch"
+        },
+        "endDate": {
+          "type": "string",
+          "description": "End time in milliseconds since epoch"
+        }
+      },
+      "required": ["startDate", "endDate"]
+    }
+  },
+  "server": {
+    "url": "https://shasha.maveriq.in/slots",
+    "headers": {}
+  },
+  "messages": [
+    {
+      "type": "request-start"
+    }
+  ]
+}

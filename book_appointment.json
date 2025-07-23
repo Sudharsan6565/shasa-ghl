@@ -1,0 +1,38 @@
+{
+  "type": "function",
+  "function": {
+    "name": "book_appointment",
+    "description": "Books an appointment on GHL calendar",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "startTime": {
+          "type": "string",
+          "description": "ISO time slot (e.g., 2025-07-24T10:00:00Z)"
+        },
+        "name": {
+          "type": "string",
+          "description": "Lead's full name"
+        },
+        "email": {
+          "type": "string",
+          "description": "Email of the user"
+        },
+        "phone": {
+          "type": "string",
+          "description": "Phone number of the user"
+        }
+      },
+      "required": ["startTime", "phone"]
+    }
+  },
+  "server": {
+    "url": "https://shasha.maveriq.in/book",
+    "headers": {}
+  },
+  "messages": [
+    {
+      "type": "request-start"
+    }
+  ]
+}
